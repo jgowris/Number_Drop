@@ -20,10 +20,43 @@
         <div class="modalContent">
           <h2>Welcome to Number Drop</h2>
           <h3 class="modal-message">...because math is fun!!</h3>
-          <label for="fname">Enter Player name:</label>
+          <label for="fname">Player name:</label>
           <input type="text" id="fname" name="fname" /><br />
           <!-- <p class="gamer">Enter your Name:</p> -->
           <button class="modCont">Continue</button>
+        </div>
+      </div>
+      <div class="aboutTheGame">
+        <div class="aboutTheGameContent">
+          <h2>About this game</h2>
+          <p>
+            Number Drop is a puzzle game that is similar to 2048. In the game of
+            2048, you slide two of the same number together to become one
+            number. You keep doing this by sliding two numbers until you get the
+            largest number you can possibly get, which is 2048 in this game.
+            Falling Numbers is similar except that you drop the numbers from
+            above. If you have a 2 you want to drop it above another 2 so that
+            the numbers combine to become 4. Then you would want to drop 4 on
+            top of another 4. You can also use this opportunity to push two
+            other numbers together if there is no matching number in sight. Your
+            objective is to add together the numbers until you reach the highest
+            number possible without running out of space.
+          </p>
+          <button class="closeModal">Close</button>
+        </div>
+      </div>
+      <div class="rulesOfGame">
+        <div class="rulesOfGameContent">
+          <h2>Rules of the game</h2>
+          <p>
+            To play this puzzle game, drag the number across the top, and click
+            on the screen to drop it. Ideally, you want to drop it next to or
+            above the same number. If there is no number available, drop to push
+            other numbers together or where you believe it would best be needed.
+            Keep dropping numbers but avoid running out of space. If you get
+            stuck, you can always restart the game with a new set of numbers.
+          </p>
+          <button class="closeModal">Close</button>
         </div>
       </div>
       <header>
@@ -38,33 +71,41 @@
           <li class="pointsEarned">POINTS EARNED:</li>
         </ul>
       </div>
-      <div class="btnSection">
-        <div class="forBorder">
+      <div class="userInteraction">
+        <div class="forButtons">
           <button class="aboutGame">About the game</button>
           <button class="gameRules">How it's played</button>
           <button class="loadGame">Play</button>
           <button class="resetGame">Reset</button>
         </div>
-      </div>
-      <div class="forNumbers">
-        <div class="number numberTwo">2</div>
-        <div class="number numberFour">4</div>
-        <div class="number numberEight">8</div>
-        <div class="number numbersSixteen">16</div>
-        <div class="number numbersThirtyTwo">32</div>
-        <div class="number numbersSixtyFour">64</div>
-        <div class="number numbersOneTwoEight">128</div>
-        <div class="number numbersTwoFiveSix">256</div>
-        <div class="number numbersFiveOneTwo">512</div>
-        <div class="number numbersOneZTwoFour">1024</div>
-        <div class="number numbersTwoZFourEIght">2048</div>
-      </div>
+        <div class="gameSpace">
+          <div class="colOne"></div>
+          <div class="colTwo"></div>
+          <div class="colThree"></div>
+          <div class="colFour"></div>
+          <div class="colFive"></div>
+          <div class="colSix"></div>
+        </div>
+        <div class="forNumbers">
+          <div class="number numberTwo">2</div>
+          <div class="number numberFour">4</div>
+          <div class="number numberEight">8</div>
+          <div class="number numbersSixteen">16</div>
+          <div class="number numbersThirtyTwo">32</div>
+          <div class="number numbersSixtyFour">64</div>
+          <div class="number numbersOneTwoEight">128</div>
+          <div class="number numbersTwoFiveSix">256</div>
+          <div class="number numbersFiveOneTwo">512</div>
+          <div class="number numbersOneZTwoFour">1024</div>
+          <div class="number numbersTwoZFourEIght">2048</div>
+        </div>
 
-      <script
-        src="https://kit.fontawesome.com/7e0fb625cb.js"
-        crossorigin="anonymous"
-      ></script>
-      <script src="/app.js"></script>
+        <script
+          src="https://kit.fontawesome.com/7e0fb625cb.js"
+          crossorigin="anonymous"
+        ></script>
+        <script src="/app.js"></script>
+      </div>
     </main>
   </body>
 </html>

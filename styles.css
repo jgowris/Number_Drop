@@ -10,8 +10,9 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   top: 0;
+  left: 0;
   margin: 0;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 .modal-cont {
@@ -56,9 +57,13 @@ h2 {
   margin-bottom: 2px;
   width: 100%;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 3px gray;
 }
 
+h1 {
+  box-shadow: 5px 10px 15px 0.8px yellow;
+}
 h3 {
   font-size: 20px;
   font-style: italic;
@@ -68,6 +73,7 @@ h3 {
   margin-right: 40px;
   margin-top: 5px;
   margin-bottom: 35px;
+  color: brown;
   /* justify-items: center; */
 }
 
@@ -75,16 +81,19 @@ label,
 #fname {
   margin-left: 35px;
   font-size: 18px;
+  font-family: "Rubik Distressed", cursive;
 }
 
 label {
   height: 25px;
   font-size: 18px;
+  text-shadow: 3px 3px 3px gray;
 }
 
 #fname {
   margin-right: 30px;
   margin-left: 10px;
+  font-family: "Rubik Distressed", cursive;
 }
 
 .modCont {
@@ -94,18 +103,87 @@ label {
   font-family: "Rubik Distressed", cursive;
 }
 
-/* main {
+.aboutTheGame {
+  top: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.25);
   display: flex;
-} */
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
 
-header > .header {
+.aboutTheGameContent {
+  height: 300px;
+  width: 600px;
+  z-index: 1;
+  position: absolute;
+  background-color: #ff6b35;
+  border: 10px solid white;
+  border-radius: 15px;
+}
+
+.fa-solid {
+  align-items: flex-end;
+  font-size: 38px;
+}
+
+.rulesOfGame {
+  top: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.rulesOfGameContent {
+  height: 500px;
+  width: 600px;
+  z-index: 1;
+  position: absolute;
+  background-color: #ff6b35;
+  border: 10px solid white;
+  border-radius: 15px;
+  font-family: "Dancing Script", cursive;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 50px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: right;
+}
+
+.closeModal {
+  background-color: #472d30;
+  color: whitesmoke;
+  padding: 10px 25px;
+  font-family: "Rubik Distressed", cursive;
+  width: 100px;
+}
+/* <i class="fa-solid fa-square-xmark"></i> */
+
+main {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+.header {
   background-color: #38040e;
-  width: 100vw;
-  display: flex;
-
-  /* align-items: center; */
-  /* flex-flow: row wrap; */
-  /* justify-content: center; */
+  width: 100%;
 }
 
 .gameDetails {
@@ -116,8 +194,6 @@ header > .header {
   background-color: #9e2a2b;
   display: flex;
   flex-flow: row wrap;
-  /* justify-content: center; */
-  /* box-shadow: 5px; */
 }
 
 li {
@@ -132,8 +208,10 @@ li {
   padding: 10px;
   border: black solid 4px;
   flex-grow: 1;
-  font: "Arial black";
+  font-family: "Rubik Distressed", cursive;
+  /* font: "Arial black"; */
   font-weight: bold;
+  letter-spacing: 3px;
 }
 
 .nextTile {
@@ -141,7 +219,10 @@ li {
   padding: 10px;
   border: black solid 5px;
   flex-grow: 1;
+  font-family: "Rubik Distressed", cursive;
+  /* font: "Arial black"; */
   font-weight: bold;
+  letter-spacing: 3px;
 }
 .pointsEarned {
   color: white;
@@ -149,16 +230,145 @@ li {
   border: black solid 5px;
   flex-grow: 1;
   font-weight: bold;
+  font-family: "Rubik Distressed", cursive;
+  /* font: "Arial black"; */
+  letter-spacing: 3px;
+}
+
+.userInteraction {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.forButtons {
+  /* margin: 40px; */
+  margin: 0 auto;
+  padding: 0;
+  /* flex-grow: 1; */
+  width: 230px;
+  height: 300px;
+  /* margin: 10px 50px; */
+  background-color: #dda15e;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 45px 1px #dda15e;
+}
+
+.aboutGame {
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 8px 0.8px #335c67;
+  font-family: "Dancing Script", cursive;
+  font-weight: bolder;
+  font-size: 22px;
+  text-shadow: 0.5px 0.5px 0.5px green;
+}
+
+.gameRules {
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 8px 0.8px #335c67;
+  font-family: "Dancing Script", cursive;
+  font-weight: bolder;
+  font-size: 22px;
+  text-shadow: 0.5px 0.5px 0.5px green;
+}
+
+.loadGame {
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 8px 0.8px #335c67;
+  font-family: "Dancing Script", cursive;
+  font-weight: bolder;
+  font-size: 22px;
+  text-shadow: 0.5px 0.5px 0.5px green;
+}
+
+.resetGame {
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 8px 0.8px #335c67;
+  font-family: "Dancing Script", cursive;
+  font-weight: bolder;
+  font-size: 22px;
+  text-shadow: 0.5px 0.5px 0.5px green;
+}
+
+.gameSpace {
+  width: 340px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #dda15e;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  box-shadow: 5px 5px 45px 1px #dda15e;
+}
+.colOne {
+  background-color: #cb997e;
+  height: 600px;
+  width: 55px;
+  box-shadow: -5px 1px 0 0.8px #cb997e;
+}
+.colTwo {
+  background-color: #ddbea9;
+  height: 600px;
+  width: 55px;
+  box-shadow: 10px 1px 0px 0.8px #ddbea9;
+}
+.colThree {
+  background-color: #ffe8d6;
+  height: 600px;
+  width: 55px;
+  box-shadow: 10px 1px 0px 0.8px #ffe8d6;
+}
+.colFour {
+  background-color: #b7b7a4;
+  height: 600px;
+  width: 55px;
+  box-shadow: 10px 1px 0px 0.8px #b7b7a4;
+}
+.colFive {
+  background-color: #a5a58d;
+  height: 600px;
+  width: 55px;
+  box-shadow: 10px 1px 0px 0.8px #a5a58d;
+}
+.colSix {
+  background-color: #6b705c;
+  height: 600px;
+  width: 55px;
+  box-shadow: 10px 1px 3px 0.8px #6b705c;
+}
+
+.forNumbers {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #dda15e;
+  /* flex-grow: 1; */
+  height: 500px;
+  width: 100px;
 }
 .number {
   width: 55px;
   height: 40px;
-  background-color: brown;
+  /* background-color: brown; */
   color: white;
   text-align: center;
-  margin: 1px auto;
+  margin-top: 2px;
   font-size: 18px;
   border-radius: 10px;
+  box-shadow: 5px -5px 8px 0.8px #335c67;
 }
 
 .numberTwo {
