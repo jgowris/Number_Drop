@@ -1,5 +1,200 @@
 body {
-  background-color: orange;
-  width: 100%;
+  background: url(./background-pic.png) repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-color: #d7b377; */
+  width: 100vw;
   height: 100%;
+  font-family: "arial";
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  top: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+.modal-cont {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 1); */
+  background: url(./background-pic.png) repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background-color: #ff6b35;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-flow: row wrap;
+  width: 600px;
+  /* justify-items: center; */
+  align-items: center;
+  color: white;
+  padding: 25px;
+  border-color: white;
+  border: 10px solid;
+  border-radius: 15px;
+}
+
+h1,
+h2 {
+  font-family: "Rubik Distressed", cursive;
+  width: 100vw;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 2px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  width: 100%;
+  text-align: right;
+  margin-right: 40px;
+  margin-top: 5px;
+  margin-bottom: 35px;
+  /* justify-items: center; */
+}
+
+label,
+#fname {
+  margin-left: 35px;
+  font-size: 18px;
+}
+
+label {
+  height: 25px;
+  font-size: 18px;
+}
+
+#fname {
+  margin-right: 30px;
+  margin-left: 10px;
+}
+
+.modCont {
+  background-color: #472d30;
+  color: whitesmoke;
+  padding: 5px 20px;
+  font-family: "Rubik Distressed", cursive;
+}
+
+/* main {
+  display: flex;
+} */
+
+header > .header {
+  background-color: #38040e;
+  width: 100vw;
+  display: flex;
+
+  /* align-items: center; */
+  /* flex-flow: row wrap; */
+  /* justify-content: center; */
+}
+
+.gameDetails {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #9e2a2b;
+  display: flex;
+  flex-flow: row wrap;
+  /* justify-content: center; */
+  /* box-shadow: 5px; */
+}
+
+li {
+  display: inline;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.player {
+  color: white;
+  padding: 10px;
+  border: black solid 4px;
+  flex-grow: 1;
+  font: "Arial black";
+  font-weight: bold;
+}
+
+.nextTile {
+  color: white;
+  padding: 10px;
+  border: black solid 5px;
+  flex-grow: 1;
+  font-weight: bold;
+}
+.pointsEarned {
+  color: white;
+  padding: 10px;
+  border: black solid 5px;
+  flex-grow: 1;
+  font-weight: bold;
+}
+.number {
+  width: 55px;
+  height: 40px;
+  background-color: brown;
+  color: white;
+  text-align: center;
+  margin: 1px auto;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.numberTwo {
+  background-color: #e9d8a6;
+  color: rgb(0, 0, 0);
+}
+.numberFour {
+  background-color: #ee9b00;
+  color: rgb(0, 0, 0);
+}
+.numberEight {
+  background-color: #94d2bd;
+  color: rgb(0, 0, 0);
+}
+.numbersSixteen {
+  background-color: #ca6702;
+}
+.numbersThirtyTwo {
+  background-color: #0a9396;
+}
+.numbersSixtyFour {
+  background-color: #bb3e03;
+}
+.numbersOneTwoEight {
+  background-color: #005f73;
+}
+.numbersTwoFiveSix {
+  background-color: #ae2012;
+}
+.numbersFiveOneTwo {
+  background-color: #9b2226;
+}
+.numbersOneZTwoFour {
+  background-color: #5f0f40;
+}
+.numbersTwoZFourEIght {
+  background-color: #001219;
+  color: rgb(255, 255, 255);
 }
