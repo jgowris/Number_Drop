@@ -94,7 +94,32 @@ const getModalContent = document.querySelector(".modalContent");
 const getModalBtn = document.querySelector(".modCont");
 const getPlayerName = document.querySelector("#fname");
 const showPlayerName = document.querySelector(".player");
+const getAboutGameBtn = document.querySelector(".aboutGame");
+const getAboutGameModal = document.querySelector(".aboutTheGame");
+const getAboutGameModalContent = document.querySelector(".aboutTheGameContent");
+const getAboutGameModalCloseBtn = document.querySelector(
+  ".closeModalAboutGame"
+);
+/* <div class="aboutTheGame">
+<div class="aboutTheGameContent"> */
+const getGameRulesBtn = document.querySelector(".gameRules");
+const getGameRulesModal = document.querySelector(".rulesOfGame");
+/* <div class="rulesOfGame">
+        <div class="rulesOfGameContent"> */
 
+// <button class="closeModal">Close</button>
+
+function dispAboutGameModal() {
+  console.log("Inside the About the game modal call");
+  getAboutGameModal.style.display = "block";
+  getAboutGameModalContent.style.display = "block";
+}
+
+function closeModal() {
+  console.log("Inside the close modal function");
+  getAboutGameModal.style.display = "none";
+  getAboutGameModalContent.style.display = "none";
+}
 function loadGame() {
   console.log("This is a test");
   getModCont.style.display = "none";
@@ -103,3 +128,5 @@ function loadGame() {
 }
 // const getModBtn = document.querySelector(".modCont");
 getModalBtn.addEventListener("click", loadGame);
+getAboutGameBtn.addEventListener("click", dispAboutGameModal);
+getAboutGameModalCloseBtn.addEventListener("click", closeModal);

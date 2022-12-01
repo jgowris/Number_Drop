@@ -105,31 +105,45 @@ label {
 
 .aboutTheGame {
   top: 0;
-  margin: 0;
+  margin: 0px;
   height: 100%;
   width: 100%;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.25);
+  /* background-color: greenyellow; */
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  display: none;
 }
 
 .aboutTheGameContent {
-  height: 300px;
-  width: 600px;
+  height: 420px;
+  width: 800px;
+  margin: 80px auto;
   z-index: 1;
-  position: absolute;
   background-color: #ff6b35;
   border: 10px solid white;
   border-radius: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: "Dancing Script", cursive;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 50px;
 }
 
-.fa-solid {
-  align-items: flex-end;
-  font-size: 38px;
+.closeModalAboutGame {
+  background-color: #472d30;
+  color: whitesmoke;
+  padding: 10px 25px;
+  font-family: "Rubik Distressed", cursive;
+  width: 100px;
+  margin-left: 650px;
 }
 
 .rulesOfGame {
@@ -140,13 +154,13 @@ label {
   z-index: 1;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.25);
-  display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 .rulesOfGameContent {
-  height: 500px;
+  height: 450px;
   width: 600px;
   z-index: 1;
   position: absolute;
@@ -162,12 +176,13 @@ label {
   justify-content: right;
 }
 
-.closeModal {
+.closeModalGameRules {
   background-color: #472d30;
   color: whitesmoke;
   padding: 10px 25px;
   font-family: "Rubik Distressed", cursive;
   width: 100px;
+  margin-left: 650px;
 }
 /* <i class="fa-solid fa-square-xmark"></i> */
 
