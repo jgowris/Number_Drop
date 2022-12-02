@@ -12,7 +12,6 @@ body {
   top: 0;
   left: 0;
   margin: 0;
-  /* overflow: auto; */
 }
 
 .modal-cont {
@@ -39,7 +38,7 @@ body {
   display: flex;
   flex-flow: row wrap;
   width: 600px;
-  /* justify-items: center; */
+  height: 250px;
   align-items: center;
   color: white;
   padding: 25px;
@@ -57,7 +56,6 @@ h2 {
   margin-bottom: 2px;
   width: 100%;
   text-align: center;
-  margin-bottom: 20px;
   text-shadow: 3px 3px 3px gray;
 }
 
@@ -69,10 +67,11 @@ h3 {
   font-style: italic;
   font-weight: bold;
   width: 100%;
-  text-align: right;
+  text-align: center;
   margin-right: 40px;
-  margin-top: 5px;
-  margin-bottom: 35px;
+  /* margin-top: 5px; */
+  margin-top: 0px;
+  margin-bottom: 25px;
   color: brown;
   /* justify-items: center; */
 }
@@ -109,32 +108,32 @@ label {
   height: 100%;
   width: 100%;
   z-index: 1;
-  position: fixed;
+  position: absolute;
   background-color: rgba(0, 0, 0, 0.25);
   /* background-color: greenyellow; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: row wrap;
+  /* justify-content: center; */
+  /* align-items: center; */
   display: none;
 }
 
 .aboutTheGameContent {
-  height: 420px;
+  height: 410px;
   width: 800px;
   margin: 80px auto;
   z-index: 1;
   background-color: #ff6b35;
   border: 10px solid white;
   border-radius: 15px;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
+  /* display: flex;
+  flex-flow: row; */
+  /* justify-content: center;
+  align-items: center; */
+  padding: 50px;
   font-family: "Dancing Script", cursive;
   font-size: 24px;
   font-weight: bold;
-  padding: 50px;
 }
 
 .closeModalAboutGame {
@@ -154,37 +153,40 @@ label {
   z-index: 1;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.25);
+  /* background-color: greenyellow; */
+  display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   display: none;
 }
 .rulesOfGameContent {
-  height: 450px;
+  height: 400px;
   width: 600px;
   z-index: 1;
-  position: absolute;
+  margin: 80px auto;
+  /* position: absolute; */
   background-color: #ff6b35;
   border: 10px solid white;
   border-radius: 15px;
   font-family: "Dancing Script", cursive;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
-  padding: 50px;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: right;
+  padding: 40px;
+  /* display: flex;
+  flex-flow: row wrap;
+  justify-content: right; */
 }
 
 .closeModalGameRules {
   background-color: #472d30;
   color: whitesmoke;
-  padding: 10px 25px;
+  /* padding: 5px 10px; */
   font-family: "Rubik Distressed", cursive;
   width: 100px;
-  margin-left: 650px;
+  margin-left: 500px;
+  padding: 5px 10px;
 }
-/* <i class="fa-solid fa-square-xmark"></i> */
 
 main {
   top: 0;
