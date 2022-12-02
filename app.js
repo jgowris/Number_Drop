@@ -1,5 +1,27 @@
 console.log("loaded");
 
+/* ========= PSUEDO CODE ===========
+
+High-level steps to achieve before writing the pseudo code:
+
+1. Identify the numbers in scope for the game.
+2. Identify the numbers that will be in the loop for user selection.
+3. Generate a random number for drop.
+3. Complete proof of concept for one number tile getting to the base.
+4. Complete proof of concept for a different tile settling on top of another tile.
+5. Complete proof of concept for two tiles of the same number (horizontal drop) getting added to a single tile.
+6. Extend 5 to add two tiles having same number, but vertically aligned.
+7. Adjust the alignment for each calculation.
+8. Update the Points earned for every merge.
+
+
+
+
+*/
+
+const numberRoll = [2, 4, 8, 16, 32, 64, 128];
+console.log("number roll is " + numberRoll);
+
 const numbArr = [
   {
     nbr: 2,
@@ -106,6 +128,7 @@ const getGameRulesModalContent = document.querySelector(".rulesOfGameContent");
 const getGameRulesModalCloseBtn = document.querySelector(
   ".closeModalGameRules"
 );
+const startGame = document.querySelector(".loadGame");
 
 function dispAboutGameModal() {
   console.log("Inside the About the game modal call");
@@ -130,14 +153,29 @@ function closeModalForAboutGame() {
   getAboutGameModal.style.display = "none";
   getAboutGameModalContent.style.display = "none";
 }
+function nxtNumberTile() {
+  let getRandomNumberRoll = Math.floor(Math.random() * numberRoll.length);
+  const rdmNumber = numberRoll[getRandomNumberRoll];
+  console.log("Next number is " + rdmNumber);
+  const getNxtTile = document.querySelector(".nextTile");
+  getNxtTile.textContent = "COMING UP... " + rdmNumber;
+}
 
-function loadGame() {
-  console.log("This is a test");
+function closeLoadModal() {
+  console.log("Inside the load game function");
   getModCont.style.display = "none";
   getModalContent.style.display = "none";
   showPlayerName.textContent = "PLAYER: " + getPlayerName.value;
+  console.log("Initial modal got closed");
 }
-getModalBtn.addEventListener("click", loadGame);
+
+function loadGame() {
+  console.log("Player name is available now, show the game landing page");
+  nxtNumberTile();
+  console.log("Game landing page is on");
+}
+getModalBtn.addEventListener("click", closeLoadModal);
+startGame.addEventListener("click", loadGame);
 getAboutGameBtn.addEventListener("click", dispAboutGameModal);
 getAboutGameModalCloseBtn.addEventListener("click", closeModalForAboutGame);
 

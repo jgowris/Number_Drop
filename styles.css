@@ -124,6 +124,7 @@ label {
   margin: 80px auto;
   z-index: 1;
   background-color: #ff6b35;
+  background-color: #eb906f;
   border: 10px solid white;
   border-radius: 15px;
   /* display: flex;
@@ -166,7 +167,7 @@ label {
   z-index: 1;
   margin: 80px auto;
   /* position: absolute; */
-  background-color: #ff6b35;
+  background-color: #eb906f;
   border: 10px solid white;
   border-radius: 15px;
   font-family: "Dancing Script", cursive;
@@ -272,7 +273,7 @@ li {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 5px 45px 1px #dda15e;
+  box-shadow: 5px 5px 45px 1px #a37541;
 }
 
 .aboutGame {
@@ -382,6 +383,7 @@ li {
   /* background-color: brown; */
   color: white;
   text-align: center;
+  justify-content: center;
   margin-top: 2px;
   font-size: 18px;
   border-radius: 10px;
