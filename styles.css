@@ -119,9 +119,9 @@ label {
 }
 
 .aboutTheGameContent {
-  height: 410px;
-  width: 800px;
-  margin: 80px auto;
+  height: 320px;
+  width: 400px;
+  margin: 150px auto;
   z-index: 1;
   background-color: #ff6b35;
   background-color: #eb906f;
@@ -143,7 +143,7 @@ label {
   padding: 10px 25px;
   font-family: "Rubik Distressed", cursive;
   width: 100px;
-  margin-left: 650px;
+  margin-left: 280px;
 }
 
 .rulesOfGame {
@@ -162,8 +162,8 @@ label {
   display: none;
 }
 .rulesOfGameContent {
-  height: 400px;
-  width: 600px;
+  height: 450px;
+  width: 700px;
   z-index: 1;
   margin: 80px auto;
   /* position: absolute; */
@@ -171,9 +171,9 @@ label {
   border: 10px solid white;
   border-radius: 15px;
   font-family: "Dancing Script", cursive;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
-  padding: 40px;
+  padding: 50px;
   /* display: flex;
   flex-flow: row wrap;
   justify-content: right; */
@@ -185,7 +185,7 @@ label {
   /* padding: 5px 10px; */
   font-family: "Rubik Distressed", cursive;
   width: 100px;
-  margin-left: 500px;
+  margin-left: 580px;
   padding: 5px 10px;
 }
 
@@ -377,7 +377,67 @@ li {
   height: 500px;
   width: 100px;
 }
-.number {
+/* .number {
+  width: 55px;
+  height: 40px;
+  /* background-color: brown; */
+/* color: white;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 8px 0.8px #335c67;
+}  */
+
+.numberTwo {
+  background-color: #e9d8a6;
+  color: rgb(0, 0, 0);
+
+  width: 55px;
+  height: 40px;
+  /* background-color: brown; */
+  text-align: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 8px 0.8px #335c67;
+}
+
+.numberFour {
+  background-color: #ee9b00;
+  color: rgb(0, 0, 0);
+
+  width: 55px;
+  height: 40px;
+  /* background-color: brown; */
+  text-align: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 8px 0.8px #335c67;
+}
+
+.numberEight {
+  background-color: #94d2bd;
+  color: rgb(0, 0, 0);
+
+  width: 55px;
+  height: 40px;
+  /* background-color: brown; */
+  text-align: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 8px 0.8px #335c67;
+}
+
+.numbersSixteen {
+  background-color: #ca6702;
+
   width: 55px;
   height: 40px;
   /* background-color: brown; */
@@ -389,41 +449,101 @@ li {
   border-radius: 10px;
   box-shadow: 5px -5px 8px 0.8px #335c67;
 }
-
-.numberTwo {
-  background-color: #e9d8a6;
-  color: rgb(0, 0, 0);
-}
-.numberFour {
-  background-color: #ee9b00;
-  color: rgb(0, 0, 0);
-}
-.numberEight {
-  background-color: #94d2bd;
-  color: rgb(0, 0, 0);
-}
-.numbersSixteen {
-  background-color: #ca6702;
-}
 .numbersThirtyTwo {
   background-color: #0a9396;
+
+  width: 55px;
+  height: 40px;
+  /* background-color: brown; */
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 8px 0.8px #335c67;
 }
 .numbersSixtyFour {
   background-color: #bb3e03;
+
+  width: 55px;
+  height: 40px;
+  /* background-color: brown; */
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 8px 0.8px #335c67;
 }
 .numbersOneTwoEight {
   background-color: #005f73;
+
+  width: 55px;
+  height: 40px;
+  /* background-color: brown; */
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 8px 0.8px #335c67;
 }
 .numbersTwoFiveSix {
   background-color: #ae2012;
+
+  width: 55px;
+  height: 40px;
+  /* background-color: brown; */
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 8px 0.8px #335c67;
 }
 .numbersFiveOneTwo {
   background-color: #9b2226;
+
+  width: 55px;
+  height: 40px;
+  /* background-color: brown; */
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 8px 0.8px #335c67;
 }
 .numbersOneZTwoFour {
   background-color: #5f0f40;
+
+  width: 55px;
+  height: 40px;
+  /* background-color: brown; */
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 8px 0.8px #335c67;
 }
 .numbersTwoZFourEIght {
   background-color: #001219;
   color: rgb(255, 255, 255);
+
+  width: 55px;
+  height: 40px;
+  /* background-color: brown; */
+  text-align: center;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 8px 0.8px #335c67;
 }
