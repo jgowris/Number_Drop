@@ -4,48 +4,41 @@ console.log("loaded");
 
 class Gameboard {
   constructor(numTile) {
+    this.numTile = randomNum();
     this.board = [
       [undefined, undefined, undefined, undefined, undefined, undefined],
       [undefined, undefined, undefined, undefined, undefined, undefined],
       [undefined, undefined, undefined, undefined, undefined, undefined],
     ];
-    this.numberRoll = [2, 4, 8, 16, 32, 64, 128];
-    this.numTile = numTile;
+    // this.numberRoll = [2, 4, 8, 16, 32, 64, 128];
     this.isGameRunning = false;
     this.startCol = 3;
   }
 
   randomNum() {
-    console.log(
-      "Inside the randomNum fn. The Number roll is " + this.numberRoll
-    );
-    for (let i = 0; i < 5; i++) {
-      const getRandomNumberRoll = Math.floor(
-        Math.random() * this.numberRoll.length
-      );
-      const numTile = this.numberRoll[getRandomNumberRoll];
-      console.log("NumTile is " + numTile);
-      return numTile;
-    }
-  }
-
-  setInterval() {
-    console.log("Inside the Set Interval function");
-    this.randomNum(), 1000;
+    console.log("Inside the randomNum function");
+    const numberRoll = [2, 4, 8, 16, 32, 64, 128];
+    const getNxtTile = document.querySelector(".nextTile");
+    const getRandomNumberRoll = Math.floor(Math.random() * numberRoll.length);
+    const numTile = numberRoll[getRandomNumberRoll];
+    console.log("NumTile is " + numTile);
+    getNxtTile.textContent = "COMING UP..." + numTile;
+    // }
   }
 
   startGame() {
-    console.log("Inside hte startGame function");
+    console.log("Inside the startGame function");
     this.isGameRunning = true;
-    console.log("Value of game running is " + this.isGameRunning);
-    this.setInterval();
+    return;
   }
 }
 
-const samp = new Gameboard();
-samp.startGame();
-console.log("Here I am");
-
+function gameOn() {
+  const runGame = new Gameboard();
+  runGame.startGame;
+  let numTile = "";
+  runGame.randomNum;
+}
 /* ========= PSUEDO CODE ===========
 
 High-level steps to achieve before writing the pseudo code:
@@ -173,12 +166,6 @@ function closeLoadModal() {
   console.log("Initial modal got closed");
 }
 
-function loadGame() {
-  console.log("Player name is available now, show the game landing page");
-  nxtNumberTile();
-  console.log("Game landing page is on");
-}
-
 // const colmnOne = [];
 // const colmnTwo = [];
 // const colmnThree = [];
@@ -190,17 +177,17 @@ function loadGame() {
 // const rdmNumber = numberRoll[getRandomNumberRoll];
 // console.log("rdmnumber is " + rdmNumber);
 
-function nxtNumberTile() {
-  const getNxtTile = document.querySelector(".nextTile");
-  getNxtTile.textContent = "COMING UP..." + rdmNumber;
-  // colmnOne.push(+rdmNumber);
-  // console.log(colmnOne);
-}
+// function nxtNumberTile() {
+//   const getNxtTile = document.querySelector(".nextTile");
+//   getNxtTile.textContent = "COMING UP..." + rdmNumber;
+//   // colmnOne.push(+rdmNumber);
+//   // console.log(colmnOne);
+// }
 
 //============== EVENT LISTENERS ============================
 
 getModalBtn.addEventListener("click", closeLoadModal);
-startGame.addEventListener("click", startGame);
+startGame.addEventListener("click", gameOn);
 getAboutGameBtn.addEventListener("click", dispAboutGameModal);
 getAboutGameModalCloseBtn.addEventListener("click", closeModalForAboutGame);
 
