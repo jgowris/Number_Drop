@@ -19,20 +19,23 @@ class Gameboard {
   }
 
   randomNum() {
-    console.log("Inside the randomNum function");
-    const numberRoll = [2, 4, 8, 16, 32, 64, 128];
-    const getNxtTile = document.querySelector(".nextTile");
-    const getRandomNumberRoll = Math.floor(Math.random() * numberRoll.length);
-    // const numTile = numberRoll[getRandomNumberRoll];
-    this.numTile = numberRoll[getRandomNumberRoll];
-    console.log("NumTile is " + this.numTile);
-    getNxtTile.textContent = "COMING UP..." + this.numTile;
-    // }
+    if ((this.isGameRunning = true)) {
+      console.log("Inside the randomNum function");
+      const numberRoll = [2, 4, 8, 16, 32, 64, 128];
+      const getNxtTile = document.querySelector(".nextTile");
+      const getRandomNumberRoll = Math.floor(Math.random() * numberRoll.length);
+      // const numTile = numberRoll[getRandomNumberRoll];
+      this.numTile = numberRoll[getRandomNumberRoll];
+      console.log("NumTile is " + this.numTile);
+      getNxtTile.textContent = "COMING UP..." + this.numTile;
+    }
   }
 
   startGame() {
+    const startGame = document.querySelector(".loadGame");
+    // startGame.addEventListener("click", () => {
     this.isGameRunning = true;
-    //LOAD THE UI
+    this.randomNum();
   }
 
   // getNumTile() {
@@ -63,20 +66,111 @@ class Gameboard {
   // }
 
   updateColOne() {
-    const getArrRef = newGame.board[0].indexOf(undefined);
-    console.log("Idx ref for undef is " + getArrRef);
+    console.log(this.board);
+    console.log(this.numTile);
+    const getArrRef = this.board[0].indexOf(undefined);
+    console.log("Idx ref for undef in Col 1 is " + getArrRef);
     const getColOne = document.querySelector(".colOne");
-    console.log("Old value is: " + newGame[getArrRef]);
-    newGame[getArrRef] = newGame.numTile;
-    console.log("New value is: " + newGame[getArrRef]);
-    // console.log(newGame.board);
-    // newGame.board[getArrRef] = newGame.numTile;
-    // console.log(newGame.board);
-    // newGame.getNumTile;
-    // const getColOne = document.querySelector(".colOne");
-    // getColOne.console.log("undefined in array 0 is " + getArrRef);
-    // console.log("col is 1");
+    console.log(
+      "Old value in the index location in Col 1 is: " + this.board[0][getArrRef]
+    );
+    this.board[getArrRef] = this.numTile;
+    console.log(
+      "New value for the same index location in col 1 is : " +
+        this.board[getArrRef]
+    );
     console.log("current random number is " + newGame.numTile);
+    this.randomNum();
+  }
+
+  updateColTwo() {
+    console.log("current random number is " + newGame.numTile);
+    const getArrRef = this.board[1].indexOf(undefined);
+    console.log("Idx ref for undef is col 2 is " + getArrRef);
+    const getColOne = document.querySelector(".colTwo");
+    console.log(
+      "Old value in the index location in col 2 is : " +
+        this.board[1][getArrRef]
+    );
+    this.board[getArrRef] = this.numTile;
+    console.log(
+      "New value for the same index location in col 2 is : " +
+        this.board[getArrRef]
+    );
+    console.log("current random number is " + this.numTile);
+    this.randomNum();
+  }
+
+  updateColThree() {
+    console.log("current random number is " + newGame.numTile);
+    const getArrRef = this.board[2].indexOf(undefined);
+    console.log("Idx ref for undef is col 3 is " + getArrRef);
+    const getColOne = document.querySelector(".colThree");
+    console.log(
+      "Old value in the index location in col 2 is : " +
+        this.board[2][getArrRef]
+    );
+    this.board[getArrRef] = this.numTile;
+    console.log(
+      "New value for the same index location in col 3 is : " +
+        this.board[getArrRef]
+    );
+    console.log("current random number is " + this.numTile);
+    this.randomNum();
+  }
+
+  updateColThree() {
+    console.log("current random number is " + newGame.numTile);
+    const getArrRef = this.board[3].indexOf(undefined);
+    console.log("Idx ref for undef is col 4 is " + getArrRef);
+    const getColOne = document.querySelector(".colThree");
+    console.log(
+      "Old value in the index location in col 4 is : " +
+        this.board[3][getArrRef]
+    );
+    this.board[getArrRef] = this.numTile;
+    console.log(
+      "New value for the same index location in col 4 is : " +
+        this.board[getArrRef]
+    );
+    console.log("current random number is " + this.numTile);
+    this.randomNum();
+  }
+
+  updateColFive() {
+    console.log("current random number is " + newGame.numTile);
+    const getArrRef = this.board[4].indexOf(undefined);
+    console.log("Idx ref for undef is col 5 is " + getArrRef);
+    const getColOne = document.querySelector(".colFive");
+    console.log(
+      "Old value in the index location in col 5 is : " +
+        this.board[4][getArrRef]
+    );
+    this.board[getArrRef] = this.numTile;
+    console.log(
+      "New value for the same index location in col 5 is : " +
+        this.board[getArrRef]
+    );
+    console.log("current random number is " + this.numTile);
+    this.randomNum();
+  }
+
+  updateColSix() {
+    console.log("current random number is " + newGame.numTile);
+    const getArrRef = this.board[5].indexOf(undefined);
+    console.log("Idx ref for undef is col 6 is " + getArrRef);
+    const getColOne = document.querySelector(".colSix");
+    console.log(
+      "Old value in the index location in col 6 is : " +
+        this.board[5][getArrRef]
+    );
+    this.board[getArrRef] = this.numTile;
+    console.log(
+      "New value for the same index location in col 6 is : " +
+        this.board[getArrRef]
+    );
+    console.log("current random number is " + this.numTile);
+    this.randomNum();
   }
 
   // getColTwo.addEventListener("click", function() {
@@ -265,7 +359,7 @@ function closeModalForAboutGame() {
 }
 
 function closeLoadModal() {
-  console.log("Inside the load game function");
+  console.log("Inside the close modal function");
   getModCont.style.display = "none";
   getModalContent.style.display = "none";
   showPlayerName.textContent = "PLAYER: " + getPlayerName.value;
@@ -292,14 +386,35 @@ function closeLoadModal() {
 
 //============== EVENT LISTENERS ============================
 const newGame = new Gameboard();
-startGame.addEventListener("click", newGame.startGame);
-newGame.randomNum();
-getColOne.addEventListener("click", newGame.updateColOne);
-getColTwo.addEventListener("click", newGame.updateColTwo);
-getColThree.addEventListener("click", newGame.updateColThree);
-getColFour.addEventListener("click", newGame.updateColFour);
-getColFive.addEventListener("click", newGame.updateColFive);
-getColSix.addEventListener("click", newGame.updateColSix);
+console.log(newGame);
+
+startGame.addEventListener("click", () => {
+  newGame.startGame();
+});
+
+getColOne.addEventListener("click", () => {
+  newGame.updateColOne();
+});
+
+getColTwo.addEventListener("click", () => {
+  newGame.updateColTwo();
+});
+
+getColThree.addEventListener("click", () => {
+  newGame.updateColThree();
+});
+
+getColFour.addEventListener("click", () => {
+  newGame.updateColFour();
+});
+
+getColFive.addEventListener("click", () => {
+  newGame.updateColFive();
+});
+
+getColSix.addEventListener("click", () => {
+  newGame.updateColSix();
+});
 
 // getGameSpace.addEventListener("click",updateCol);
 getModalBtn.addEventListener("click", closeLoadModal);
