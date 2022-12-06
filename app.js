@@ -74,7 +74,7 @@ class Gameboard {
     console.log(
       "Old value in the index location in Col 1 is: " + this.board[0][getArrRef]
     );
-    this.board[getArrRef] = this.numTile;
+    this.board[0][getArrRef] = this.numTile;
     console.log(
       "New value for the same index location in col 1 is : " +
         this.board[getArrRef]
@@ -92,7 +92,7 @@ class Gameboard {
       "Old value in the index location in col 2 is : " +
         this.board[1][getArrRef]
     );
-    this.board[getArrRef] = this.numTile;
+    this.board[1][getArrRef] = this.numTile;
     console.log(
       "New value for the same index location in col 2 is : " +
         this.board[getArrRef]
@@ -110,7 +110,7 @@ class Gameboard {
       "Old value in the index location in col 2 is : " +
         this.board[2][getArrRef]
     );
-    this.board[getArrRef] = this.numTile;
+    this.board[2][getArrRef] = this.numTile;
     console.log(
       "New value for the same index location in col 3 is : " +
         this.board[getArrRef]
@@ -119,7 +119,7 @@ class Gameboard {
     this.randomNum();
   }
 
-  updateColThree() {
+  updateColFour() {
     console.log("current random number is " + newGame.numTile);
     const getArrRef = this.board[3].indexOf(undefined);
     console.log("Idx ref for undef is col 4 is " + getArrRef);
@@ -128,7 +128,7 @@ class Gameboard {
       "Old value in the index location in col 4 is : " +
         this.board[3][getArrRef]
     );
-    this.board[getArrRef] = this.numTile;
+    this.board[3][getArrRef] = this.numTile;
     console.log(
       "New value for the same index location in col 4 is : " +
         this.board[getArrRef]
@@ -146,7 +146,7 @@ class Gameboard {
       "Old value in the index location in col 5 is : " +
         this.board[4][getArrRef]
     );
-    this.board[getArrRef] = this.numTile;
+    this.board[4][getArrRef] = this.numTile;
     console.log(
       "New value for the same index location in col 5 is : " +
         this.board[getArrRef]
@@ -164,7 +164,7 @@ class Gameboard {
       "Old value in the index location in col 6 is : " +
         this.board[5][getArrRef]
     );
-    this.board[getArrRef] = this.numTile;
+    this.board[5][getArrRef] = this.numTile;
     console.log(
       "New value for the same index location in col 6 is : " +
         this.board[getArrRef]
