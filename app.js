@@ -35,39 +35,47 @@ class Gameboard {
     //LOAD THE UI
   }
 
-  getNumTile() {
-    switch (newGame.numTile) {
-      case 2:
-        const getTwoTile = document.querySelector(".numberTwo");
-        console.log(getTwoTile);
-        break;
-      case 4:
-        const getFourTile = document.querySelector(".numberFour");
-        break;
-      case 8:
-        const getEightTile = document.querySelector(".numberEight");
-        break;
-      case 16:
-        const getSxTeenTile = document.querySelector(".numbersSixteen");
-        break;
-      case 32:
-        const getThryTwoTile = document.querySelector(".numbersThirtyTwo");
-        break;
-      case 64:
-        const getSixForTile = document.querySelector(".numbersSixtyFour");
-        break;
-      case 128:
-        const getOneToEghtTile = document.querySelector(".numbersOneTwoEight");
-        break;
-    }
-  }
+  // getNumTile() {
+  //   switch (newGame.numTile) {
+  //     case 2:
+  //       const getNumTile = document.querySelector(".numberTwo");
+  //       console.log("this is test for gettwotile");
+  //       break;
+  //     case 4:
+  //       const getNumTile = document.querySelector(".numberFour");
+  //       break;
+  //     case 8:
+  //       const getNumTile = document.querySelector(".numberEight");
+  //       break;
+  //     case 16:
+  //       const getSxTeenTile = document.querySelector(".numbersSixteen");
+  //       break;
+  //     case 32:
+  //       const getThryTwoTile = document.querySelector(".numbersThirtyTwo");
+  //       break;
+  //     case 64:
+  //       const getSixForTile = document.querySelector(".numbersSixtyFour");
+  //       break;
+  //     case 128:
+  //       const getOneToEghtTile = document.querySelector(".numbersOneTwoEight");
+  //       break;
+  //   }
+  // }
 
   updateColOne() {
-    const getArrRef = newGame.board[0].lastIndexOf(undefined);
-    newGame.board[getArrRef] = this.numTile;
+    const getArrRef = newGame.board[0].indexOf(undefined);
+    console.log("Idx ref for undef is " + getArrRef);
     const getColOne = document.querySelector(".colOne");
-    getColOne.console.log("undefined in array 0 is " + getArrRef);
-    console.log("col is 1");
+    console.log("Old value is: " + newGame[getArrRef]);
+    newGame[getArrRef] = newGame.numTile;
+    console.log("New value is: " + newGame[getArrRef]);
+    // console.log(newGame.board);
+    // newGame.board[getArrRef] = newGame.numTile;
+    // console.log(newGame.board);
+    // newGame.getNumTile;
+    // const getColOne = document.querySelector(".colOne");
+    // getColOne.console.log("undefined in array 0 is " + getArrRef);
+    // console.log("col is 1");
     console.log("current random number is " + newGame.numTile);
   }
 
