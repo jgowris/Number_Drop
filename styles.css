@@ -335,38 +335,38 @@ li {
 }
 .colOne {
   background-color: #cb997e;
-  height: 500px;
-  width: 60px;
+  height: 510px;
+  width: 65px;
   /* box-shadow: -5px 1px 0 0.8px #cb997e; */
 }
 .colTwo {
   background-color: #ddbea9;
-  height: 500px;
-  width: 60px;
+  height: 510px;
+  width: 65px;
   /* box-shadow: 10px 1px 0px 0.8px #ddbea9; */
 }
 .colThree {
   background-color: #ffe8d6;
-  height: 600px;
-  width: 60px;
+  height: 610px;
+  width: 65px;
   /* box-shadow: 10px 1px 0px 0.8px #ffe8d6; */
 }
 .colFour {
   background-color: #b7b7a4;
-  height: 600px;
-  width: 60px;
+  height: 610px;
+  width: 65px;
   /* box-shadow: 10px 1px 0px 0.8px #b7b7a4; */
 }
 .colFive {
   background-color: #a5a58d;
-  height: 600px;
-  width: 60px;
+  height: 610px;
+  width: 65px;
   /* box-shadow: 10px 1px 0px 0.8px #a5a58d; */
 }
 .colSix {
   background-color: #6b705c;
-  height: 600px;
-  width: 60px;
+  height: 610px;
+  width: 65px;
   /* box-shadow: 10px 1px 3px 0.8px #6b705c; */
 }
 
@@ -398,10 +398,13 @@ li {
   width: 55px;
   height: 40px;
   /* background-color: brown; */
-  text-align: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
   margin-top: 2px;
-  font-size: 18px;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 800;
   border-radius: 10px;
   box-shadow: 5px -5px 8px 0.8px #335c67;
 }
@@ -413,10 +416,13 @@ li {
   width: 55px;
   height: 40px;
   /* background-color: brown; */
-  text-align: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
   margin-top: 2px;
-  font-size: 18px;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 800;
   border-radius: 10px;
   box-shadow: 5px -5px 8px 0.8px #335c67;
 }
@@ -428,7 +434,11 @@ li {
   width: 55px;
   height: 40px;
   /* background-color: brown; */
-  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 800;
   justify-content: center;
   margin-top: 2px;
   font-size: 18px;
@@ -443,7 +453,11 @@ li {
   height: 40px;
   /* background-color: brown; */
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 800;
   justify-content: center;
   margin-top: 2px;
   font-size: 18px;
@@ -457,7 +471,11 @@ li {
   height: 40px;
   /* background-color: brown; */
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 800;
   justify-content: center;
   margin-top: 2px;
   font-size: 18px;
@@ -471,7 +489,11 @@ li {
   height: 40px;
   /* background-color: brown; */
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 800;
   justify-content: center;
   margin-top: 2px;
   font-size: 18px;
@@ -485,7 +507,11 @@ li {
   height: 40px;
   /* background-color: brown; */
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 800;
   justify-content: center;
   margin-top: 2px;
   font-size: 18px;
@@ -499,7 +525,11 @@ li {
   height: 40px;
   /* background-color: brown; */
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 800;
   justify-content: center;
   margin-top: 2px;
   font-size: 18px;
@@ -513,7 +543,11 @@ li {
   height: 40px;
   /* background-color: brown; */
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 800;
   justify-content: center;
   margin-top: 2px;
   font-size: 18px;
@@ -527,7 +561,11 @@ li {
   height: 40px;
   /* background-color: brown; */
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 800;
   justify-content: center;
   margin-top: 2px;
   font-size: 18px;
@@ -541,7 +579,11 @@ li {
   width: 55px;
   height: 40px;
   /* background-color: brown; */
-  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 800;
   justify-content: center;
   margin-top: 2px;
   font-size: 18px;
