@@ -98,12 +98,23 @@ class Gameboard {
     this.randomNum();
   }
 
+  // gameOver() {
+  //   for (let i = 0; i < this.board.length; i++) {
+  //     for (let x = 0; x < this.board[x].length; x++) {
+  //       if (this.board[x].length - 1).valueOf() !== undefined) {
+  //         prompt("Game Over");
+  //       }
+  //     }
+  //   }
+  // }
+
   updateColOne() {
     console.log(this.board);
     console.log("current random number is " + this.numTile);
     const getArrRef = this.board[0].indexOf(undefined);
     console.log("Column 1 - First Index where undef is " + getArrRef);
     const creaNumTile = document.createElement("div");
+    // creaNumTile.classList.add("Tile" + getArrRef);
     getColOne.style.backgroundColor = "#cb997e";
     getColOne.style.height = "500px";
     getColOne.style.width = "60px";
@@ -154,6 +165,13 @@ class Gameboard {
       creaNumTile.innerText = "128";
     }
     getColOne.append(creaNumTile);
+
+    if (this.board[0][getArrRef] == this.board[0][getArrRef + 1]) {
+      this.board[0][getArrRef] =
+        this.board[0][getArrRef] + this.board[0][getArrRef + 1];
+      creaNumTile.removeChild(creaNumTile.lastElementChild);
+    }
+
     console.log("New value in the index location: " + this.board[0][getArrRef]);
     console.log("Array after update is " + this.board[0]);
     this.randomNum();
