@@ -84,12 +84,70 @@ class Gameboard {
       const numberRoll = [2, 4, 8, 16, 32, 64, 128];
       const getNxtTile = document.querySelector(".nextTile");
       const getRandomNumberRoll = Math.floor(Math.random() * numberRoll.length);
+
       // const numTile = numberRoll[getRandomNumberRoll];
       this.numTile = numberRoll[getRandomNumberRoll];
       console.log("NumTile is " + this.numTile);
-      getNxtTile.textContent = "COMING UP..." + this.numTile;
     }
   }
+
+  // getNxtTile.textContent = "COMING UP..." + this.numTile;
+
+  //   getNxtTile.style.color = "white";
+  //   getNxtTile.style.padding = "10px";
+  //   getNxtTile.style.border = "black solid 5px";
+  //   getNxtTile.style.flexGrow = "1";
+  //   getNxtTile.style.fontFamily = "Rubik Distressed, cursive";
+  //   /* font: "Arial black"; */
+  //   getNxtTile.style.fontWeight = "bold";
+  //   getNxtTile.style.letterSpacing = "3px";
+  //   getNxtTile.style.display = "Flex";
+  //   getNxtTile.style.flexDirection = "row";
+  //   const creaNumTileInfo = document.createElement("div");
+  //   creaNumTileInfo.innerText = this.numTile;
+  //   // creaNumTile.style.display = "flex";
+  //   creaNumTileInfo.style.height = "30px";
+  //   creaNumTileInfo.style.width = "50px";
+  //   creaNumTileInfo.style.color = "rgb(0, 0, 0)";
+  //   creaNumTileInfo.style.display = "flex";
+  //   creaNumTileInfo.style.alignItems = "center";
+  //   creaNumTileInfo.style.justifyContent = "center";
+  //   creaNumTileInfo.style.marginTop = "1px";
+  //   creaNumTileInfo.style.marginBottom = "2px";
+  //   creaNumTileInfo.style.marginLeft = "5px";
+  //   creaNumTileInfo.style.paddingTop = "1px";
+  //   creaNumTileInfo.style.fontSize = "14px";
+  //   creaNumTileInfo.style.fontWeight = "800";
+  //   creaNumTileInfo.style.borderRadius = "10px";
+  //   creaNumTileInfo.style.boxShadow = "3px 3px 5px 0.8px #335c67";
+  //   creaNumTileInfo.style.zIndex = "1";
+  //   if (this.numTile == 2) {
+  //     creaNumTileInfo.style.backgroundColor = "#e9d8a6";
+  //     creaNumTileInfo.innerText = "2";
+  //   } else if (this.numTile == 4) {
+  //     creaNumTileInfo.style.backgroundColor = "#ee9b00";
+  //     creaNumTileInfo.innerText = "4";
+  //   } else if (this.numTile == 8) {
+  //     creaNumTileInfo.style.backgroundColor = "#94d2bd";
+  //     creaNumTileInfo.innerText = "8";
+  //   } else if (this.numTile == 16) {
+  //     creaNumTileInfo.style.backgroundColor = "#ca6702";
+  //     creaNumTileInfo.style.color = "white";
+  //     creaNumTileInfo.innerText = "16";
+  //   } else if (this.numTile == 32) {
+  //     creaNumTileInfo.style.backgroundColor = "#0a9396";
+  //     creaNumTileInfo.style.color = "white";
+  //     creaNumTileInfo.innerText = "32";
+  //   } else if (this.numTile == 64) {
+  //     creaNumTileInfo.style.backgroundColor = "#bb3e03";
+  //     creaNumTileInfo.style.color = "white";
+  //     creaNumTileInfo.innerText = "64";
+  //   } else if ((this.numTile = 128)) {
+  //     creaNumTileInfo.style.backgroundColor = "#005f73";
+  //     creaNumTileInfo.style.color = "white";
+  //     creaNumTileInfo.innerText = "128";
+  //   }
+  //   getNxtTile.append(creaNumTileInfo);
 
   startGame() {
     const startGame = document.querySelector(".loadGame");
@@ -586,6 +644,7 @@ const getModalContent = document.querySelector(".modalContent");
 const getModalBtn = document.querySelector(".modCont");
 const getPlayerName = document.querySelector("#fname");
 const showPlayerName = document.querySelector(".player");
+// const showNxtTile = document.querySelector(".nextTile");
 const getAboutGameBtn = document.querySelector(".aboutGame");
 const getAboutGameModal = document.querySelector(".aboutTheGame");
 const getAboutGameModalContent = document.querySelector(".aboutTheGameContent");
