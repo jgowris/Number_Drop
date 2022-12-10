@@ -76,6 +76,24 @@ class Gameboard {
     // this.numberRoll = [2, 4, 8, 16, 32, 64, 128];
     this.isGameRunning = false;
     this.startCol = 3;
+    this.colOneUpd = [];
+  }
+
+  frame() {
+    let pointOfSt = 50;
+    let intervId = null;
+    if (pointOfSt === 350) {
+      clearInterval(intervId);
+    } else {
+      pointOfSt++;
+      getColFour.style.top = pointOfSt + "px";
+    }
+  }
+  animateNumDrop() {
+    let intervId = null;
+    let pointOfStart = 0;
+    clearInterval(intervId);
+    intervId = setInterval(this.frame, 5);
   }
 
   randomNum() {
@@ -88,66 +106,9 @@ class Gameboard {
       // const numTile = numberRoll[getRandomNumberRoll];
       this.numTile = numberRoll[getRandomNumberRoll];
       console.log("NumTile is " + this.numTile);
+      getNxtTile.textContent = "COMING UP..." + this.numTile;
     }
   }
-
-  // getNxtTile.textContent = "COMING UP..." + this.numTile;
-
-  //   getNxtTile.style.color = "white";
-  //   getNxtTile.style.padding = "10px";
-  //   getNxtTile.style.border = "black solid 5px";
-  //   getNxtTile.style.flexGrow = "1";
-  //   getNxtTile.style.fontFamily = "Rubik Distressed, cursive";
-  //   /* font: "Arial black"; */
-  //   getNxtTile.style.fontWeight = "bold";
-  //   getNxtTile.style.letterSpacing = "3px";
-  //   getNxtTile.style.display = "Flex";
-  //   getNxtTile.style.flexDirection = "row";
-  //   const creaNumTileInfo = document.createElement("div");
-  //   creaNumTileInfo.innerText = this.numTile;
-  //   // creaNumTile.style.display = "flex";
-  //   creaNumTileInfo.style.height = "30px";
-  //   creaNumTileInfo.style.width = "50px";
-  //   creaNumTileInfo.style.color = "rgb(0, 0, 0)";
-  //   creaNumTileInfo.style.display = "flex";
-  //   creaNumTileInfo.style.alignItems = "center";
-  //   creaNumTileInfo.style.justifyContent = "center";
-  //   creaNumTileInfo.style.marginTop = "1px";
-  //   creaNumTileInfo.style.marginBottom = "2px";
-  //   creaNumTileInfo.style.marginLeft = "5px";
-  //   creaNumTileInfo.style.paddingTop = "1px";
-  //   creaNumTileInfo.style.fontSize = "14px";
-  //   creaNumTileInfo.style.fontWeight = "800";
-  //   creaNumTileInfo.style.borderRadius = "10px";
-  //   creaNumTileInfo.style.boxShadow = "3px 3px 5px 0.8px #335c67";
-  //   creaNumTileInfo.style.zIndex = "1";
-  //   if (this.numTile == 2) {
-  //     creaNumTileInfo.style.backgroundColor = "#e9d8a6";
-  //     creaNumTileInfo.innerText = "2";
-  //   } else if (this.numTile == 4) {
-  //     creaNumTileInfo.style.backgroundColor = "#ee9b00";
-  //     creaNumTileInfo.innerText = "4";
-  //   } else if (this.numTile == 8) {
-  //     creaNumTileInfo.style.backgroundColor = "#94d2bd";
-  //     creaNumTileInfo.innerText = "8";
-  //   } else if (this.numTile == 16) {
-  //     creaNumTileInfo.style.backgroundColor = "#ca6702";
-  //     creaNumTileInfo.style.color = "white";
-  //     creaNumTileInfo.innerText = "16";
-  //   } else if (this.numTile == 32) {
-  //     creaNumTileInfo.style.backgroundColor = "#0a9396";
-  //     creaNumTileInfo.style.color = "white";
-  //     creaNumTileInfo.innerText = "32";
-  //   } else if (this.numTile == 64) {
-  //     creaNumTileInfo.style.backgroundColor = "#bb3e03";
-  //     creaNumTileInfo.style.color = "white";
-  //     creaNumTileInfo.innerText = "64";
-  //   } else if ((this.numTile = 128)) {
-  //     creaNumTileInfo.style.backgroundColor = "#005f73";
-  //     creaNumTileInfo.style.color = "white";
-  //     creaNumTileInfo.innerText = "128";
-  //   }
-  //   getNxtTile.append(creaNumTileInfo);
 
   startGame() {
     const startGame = document.querySelector(".loadGame");
@@ -156,23 +117,21 @@ class Gameboard {
     this.randomNum();
   }
 
-  // gameOver() {
-  //   for (let i = 0; i < this.board.length; i++) {
-  //     for (let x = 0; x < this.board[x].length; x++) {
-  //       if (this.board[x].length - 1).valueOf() !== undefined) {
-  //         prompt("Game Over");
-  //       }
-  //     }
-  //   }
-  // }
-
   updateColOne() {
     console.log(this.board);
     console.log("current random number is " + this.numTile);
+    this.colOneUpd.push(this.numTile);
+    console.log(this.colOneUpd.length);
+    const arrLen = this.colOneUpd.length;
+
+    console.log(this.colOneUpd.length);
+    console.log("arr 0 is now: " + this.colOneUpd);
     const getArrRef = this.board[0].indexOf(undefined);
     console.log("Column 1 - First Index where undef is " + getArrRef);
+
     const creaNumTile = document.createElement("div");
-    // creaNumTile.classList.add("Tile" + getArrRef);
+    creaNumTile.classList.add("colorTile");
+    creaNumTile.classList.add("Tile" + getArrRef);
     getColOne.style.backgroundColor = "#cb997e";
     getColOne.style.height = "500px";
     getColOne.style.width = "65px";
@@ -182,6 +141,7 @@ class Gameboard {
     getColOne.style.zIndex = "1";
     console.log("Old value in the index location: " + this.board[0][getArrRef]);
     this.board[0][getArrRef] = this.numTile;
+
     creaNumTile.innerText = this.numTile;
     // creaNumTile.style.display = "flex";
     creaNumTile.style.height = "40px";
@@ -226,23 +186,25 @@ class Gameboard {
       creaNumTile.innerText = "128";
     }
     getColOne.append(creaNumTile);
-
-    if (this.board[0][getArrRef] == this.board[0][getArrRef + 1]) {
-      this.board[0][getArrRef] =
-        this.board[0][getArrRef] + this.board[0][getArrRef + 1];
-      creaNumTile.removeChild(creaNumTile.lastElementChild);
-    }
-
-    console.log("New value in the index location: " + this.board[0][getArrRef]);
-    console.log("Array after update is " + this.board[0]);
     this.randomNum();
   }
+
+  // if (this.board[0][getArrRef] == this.board[0][getArrRef + 1]) {
+  //   this.board[0][getArrRef] =
+  //     this.board[0][getArrRef] + this.board[0][getArrRef + 1];
+
+  //   creaNumTile.removeChild(creaNumTile.lastElementChild);
+  // }
+
+  // console.log("New value in the index location: " + this.board[0][getArrRef]);
+  // console.log("Array after update is " + this.board[0]);
 
   updateColTwo() {
     console.log("current random number is " + this.numTile);
     const getArrRef = this.board[1].indexOf(undefined);
     console.log("Column 2 - First Index where undef is " + getArrRef);
     const creaNumTile = document.createElement("div");
+    creaNumTile.classList.add("colorTile");
     console.log("Old value in the index location: " + this.board[1][getArrRef]);
     this.board[1][getArrRef] = this.numTile;
     getColTwo.style.backgroundColor = "#ddbea9";
@@ -307,6 +269,7 @@ class Gameboard {
     console.log("Column 3 - First Index where undef is: " + getArrRef);
     // const getColOne = document.querySelector(".colThree");
     const creaNumTile = document.createElement("div");
+    creaNumTile.classList.add("colorTile");
     console.log("Old value in the index location: " + this.board[2][getArrRef]);
     this.board[2][getArrRef] = this.numTile;
     getColThree.style.backgroundColor = "#ffe8d6";
@@ -374,6 +337,7 @@ class Gameboard {
     console.log("Column 4 - First Index where undef is " + getArrRef);
     // const getColOne = document.querySelector(".colThree");
     const creaNumTile = document.createElement("div");
+    creaNumTile.classList.add("colorTile");
     console.log("Old value in the index location: " + this.board[3][getArrRef]);
     this.board[3][getArrRef] = this.numTile;
     getColFour.style.backgroundColor = "#b7b7a4";
@@ -440,6 +404,7 @@ class Gameboard {
     console.log("Column 5 - First Index where undef is " + getArrRef);
     // const getColOne = document.querySelector(".colFive");
     const creaNumTile = document.createElement("div");
+    creaNumTile.classList.add("colorTile");
     console.log("Old value in the index location: " + this.board[4][getArrRef]);
     this.board[4][getArrRef] = this.numTile;
     getColFive.style.backgroundColor = "#a5a58d";
@@ -505,6 +470,7 @@ class Gameboard {
     console.log("Column 6 - First Index where undef is " + getArrRef);
     // const getColOne = document.querySelector(".colSix");
     const creaNumTile = document.createElement("div");
+    creaNumTile.classList.add("colorTile");
     console.log("Old value in the index location: " + this.board[5][getArrRef]);
     this.board[5][getArrRef] = this.numTile;
     getColSix.style.backgroundColor = "#6b705c";
@@ -564,6 +530,19 @@ class Gameboard {
     console.log("Array after update is " + this.board[5]);
 
     this.randomNum();
+  }
+  resGame() {
+    console.log("Reset function called");
+    const getTile = document.querySelectorAll(".colorTile");
+    getTile.style.display = "none";
+
+    // getColOne.style.backgroundColor = "#cb997e";
+    // getColOne.style.height = "500px";
+    // getColOne.style.width = "65px";
+    // // getColOne.style.boxShadow = "-5px 1px 0 0.8px #cb997e";
+    // getColOne.style.display = "flex";
+    // getColOne.style.flexDirection = "column-reverse";
+    // getColOne.style.zIndex = "1";
   }
 }
 /* ========= PSUEDO CODE ===========
@@ -659,8 +638,10 @@ const getGameRulesModalCloseBtn = document.querySelector(
 );
 
 const startGame = document.querySelector(".loadGame");
+const resetGame = document.querySelector(".resetGame");
 const getGameSpace = document.querySelector(".gameSpace");
 const getColOne = document.querySelector(".colOne");
+const arrColOneUpd = [];
 const getColTwo = document.querySelector(".colTwo");
 const getColThree = document.querySelector(".colThree");
 const getColFour = document.querySelector(".colFour");
@@ -735,6 +716,9 @@ getColSix.addEventListener("click", () => {
 
 // getGameSpace.addEventListener("click",updateCol);
 getModalBtn.addEventListener("click", closeLoadModal);
+resetGame.addEventListener("click", () => {
+  newGame.resGame();
+});
 getAboutGameBtn.addEventListener("click", dispAboutGameModal);
 getAboutGameModalCloseBtn.addEventListener("click", closeModalForAboutGame);
 
